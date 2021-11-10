@@ -1,0 +1,48 @@
+JvmtiExport can_access_local_variables 0
+JvmtiExport can_hotswap_or_post_breakpoint 0
+JvmtiExport can_post_on_exceptions 0
+# 151 ciObject found
+ciMethod java/lang/Object <init> ()V 4097 1 2358 0 -1
+ciMethod java/lang/Object toString ()Ljava/lang/String; 177 1 22 0 -1
+ciMethod java/lang/String <init> ([CII)V 4097 1 719 0 -1
+ciMethod java/lang/String toString ()Ljava/lang/String; 2073 1 259 0 -1
+ciMethod java/lang/String valueOf (Ljava/lang/Object;)Ljava/lang/String; 3113 1 389 0 -1
+ciMethod java/lang/System currentTimeMillis ()J 2049 1 256 0 -1
+ciMethod java/lang/AbstractStringBuilder <init> (I)V 3073 1 384 0 -1
+ciMethod java/lang/AbstractStringBuilder append (Ljava/lang/String;)Ljava/lang/AbstractStringBuilder; 2113 1 264 0 -1
+ciMethod java/lang/AbstractStringBuilder append (Z)Ljava/lang/AbstractStringBuilder; 0 0 1 0 -1
+ciMethod java/lang/AbstractStringBuilder append (I)Ljava/lang/AbstractStringBuilder; 2049 1 256 0 -1
+ciMethod java/lang/AbstractStringBuilder append (J)Ljava/lang/AbstractStringBuilder; 569 1 71 0 -1
+ciMethod java/lang/StringBuilder <init> ()V 3105 1 388 0 -1
+ciMethod java/lang/StringBuilder append (Ljava/lang/String;)Ljava/lang/StringBuilder; 2057 1 257 0 -1
+ciMethod java/lang/StringBuilder append (Z)Ljava/lang/StringBuilder; 0 0 1 0 -1
+ciMethod java/lang/StringBuilder append (I)Ljava/lang/StringBuilder; 2049 1 256 0 -1
+ciMethod java/lang/StringBuilder append (J)Ljava/lang/StringBuilder; 569 1 71 0 -1
+ciMethod java/lang/StringBuilder toString ()Ljava/lang/String; 3121 1 390 0 -1
+ciMethod java/util/Set iterator ()Ljava/util/Iterator; 0 0 1 0 -1
+ciMethod java/util/Iterator hasNext ()Z 0 0 1 0 -1
+ciMethod java/util/Iterator next ()Ljava/lang/Object; 0 0 1 0 -1
+ciMethod java/util/logging/Logger isLoggable (Ljava/util/logging/Level;)Z 2177 1 272 0 -1
+ciMethod java/util/logging/Level intValue ()I 1025 1 128 0 -1
+ciMethod org/apache/juli/logging/Log isTraceEnabled ()Z 0 0 1 0 -1
+ciMethod org/apache/juli/logging/Log trace (Ljava/lang/Object;)V 0 0 1 0 -1
+ciMethod org/apache/juli/logging/Log warn (Ljava/lang/Object;Ljava/lang/Throwable;)V 0 0 1 0 -1
+ciMethod org/apache/juli/logging/DirectJDKLog isTraceEnabled ()Z 2049 1 256 0 -1
+ciMethod org/apache/juli/logging/DirectJDKLog trace (Ljava/lang/Object;)V 0 0 1 0 -1
+ciMethod org/apache/juli/logging/DirectJDKLog warn (Ljava/lang/Object;Ljava/lang/Throwable;)V 0 0 1 0 -1
+ciMethod org/apache/juli/logging/DirectJDKLog log (Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V 33 1 4 0 -1
+ciMethod org/apache/tomcat/util/res/StringManager getString (Ljava/lang/String;)Ljava/lang/String; 41 1 5 0 -1
+ciMethod org/apache/tomcat/util/net/NioEndpoint access$000 ()Lorg/apache/juli/logging/Log; 2049 1 256 0 -1
+ciMethod org/apache/tomcat/util/net/AbstractEndpoint processSocket (Lorg/apache/tomcat/util/net/SocketWrapperBase;Lorg/apache/tomcat/util/net/SocketEvent;Z)Z 0 0 1 0 -1
+ciMethod org/apache/tomcat/util/net/SocketProperties getTimeoutInterval ()J 2049 1 256 0 -1
+ciMethod org/apache/tomcat/util/net/NioEndpoint$Poller cancelledKey (Ljava/nio/channels/SelectionKey;Lorg/apache/tomcat/util/net/SocketWrapperBase;)V 0 0 1 0 -1
+ciMethod java/nio/channels/Selector keys ()Ljava/util/Set; 0 0 1 0 -1
+ciMethod org/apache/tomcat/util/net/NioEndpoint$Poller timeout (IZ)V 2049 1 256 0 -1
+instanceKlass org/apache/catalina/Session
+instanceKlass org/apache/tomcat/PeriodicEventListener
+instanceKlass org/apache/catalina/webresources/Cache$EvictionOrder
+instanceKlass java/lang/Throwable$PrintStreamOrWriter
+instanceKlass com/mysql/cj/jdbc/exceptions/SQLError
+instanceKlass com/mysql/cj/jdbc/exceptions/SQLExceptionsMapping
+instanceKlass com/mysql/cj/exceptions/ExceptionFactory
+instanceKlass com/mysql/cj/exceptions/MysqlErrorNumbers
