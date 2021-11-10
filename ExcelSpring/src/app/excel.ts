@@ -1,0 +1,37 @@
+export class Excel {
+   id: number;
+   State: string;
+   month: number;
+   year: number;
+   first: number;
+   second: number;
+  third: number;
+   fourth :number;
+   fifth :number;
+   six :number;
+   seven :number;
+ eight :number;
+ nine:number;
+ ten:number;
+  eleven:number;
+ twelve:number;
+ thirteen:number;
+ fourteen:number;
+ fiftheen:number;
+ sixtenn:number;
+ seventeen:number;
+ eighteen:number;
+ nineteen:number;
+ twenty:number;
+twentyone:number;
+ twentytwo:number;
+ twentythree:number;
+ twentyfifve:number;
+ twentysix:number;
+ twentyseven:number;
+ twentyeight:number;
+ twentynine:number;
+thirty:number;
+ thirtyone:number;
+ Total:number;
+  }

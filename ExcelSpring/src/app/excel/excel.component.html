@@ -1,0 +1,219 @@
+<html>
+    <body>
+        <!-- <form #fm=ngForm><br>
+
+        <div class="container p-3 my-3 border" class="text-center">
+           <div class="text-center">  <h3 [ngStyle]="{'border-style': 'outset'}">Last Year Daywise Actual List </h3></div> 
+            <br><div class="sd-container">
+                <label [ngStyle]="{'font-weight': 'bold'}">Month:-</label>
+                <input [(ngModel)]="jan" class="sd" type="date" name="jan" id="jan"/>
+                  <button (click)="loadData()" type="button">📅</button><br>
+                  <!-- <button (click)="getall()" type="button" value="getall">getall</button> -->
+                <!-- <br>
+                  <button style="cursor: pointer" (click)="exportexcel()">export
+                  </button>              
+                </div><br> -->
+
+
+
+                <form #fm=ngForm><br>
+
+                  <div class="container p-3 my-3 border" class="text-center">
+                     <div><h2 [ngStyle]="{'border-style': 'outset'}">MONTHWISE PLAN (2021)</h2></div> 
+                      <br><div class="sd-container">
+                          <!-- <label [ngStyle]="{'font-weight': 'bold'}">Month:-</label>
+                          <input [(ngModel)]="excel.month" class="sd" type="month" name="excel" id="excel"/>
+                            <button (click)="reloadData()" type="button">📅</button><br> -->
+                            <!-- <input type="file" id="customFile" (change)="selectFile($event)" multiple="false" />
+                            <input type="button" value="import" (click)="loadData()"> -->
+                            <br>
+                            <!-- <input type="file" id="customFile" (change)="selectFile($event)">
+                            <button class="btn btn-primary" [disabled]="!selectedFiles || admincheck || status" (click)="upload()">Import File</button> -->
+<br><br>
+
+                            <!-- <div class="form-group">
+                              <label for="month">Month:-</label>
+                              <input type="text" #month="ngModel" [(ngModel)]="stateSheets.month" name="month" id="month" placeholder="type month as 01 format" pattern="([1-9]|1[012])"  maxlength="2" minlength="2" required>
+                              <div *ngIf="month.invalid && (month.touched)">
+                                <div *ngIf="month.errors?.required" [ngStyle]="{'color': 'red'}">month is required
+                                </div>
+                                  </div>  
+                                  <div *ngIf="month.invalid && (month.touched)">
+                                    <div *ngIf="month.errors?.pattern" [ngStyle]="{'color': 'red'}">not allowed
+                                    </div>
+                                    </div>
+                            </div>
+                              <div class="form-group">
+                                <label for="year">Year:-</label>&nbsp;&nbsp;
+                                <input type="text" #year="ngModel" [(ngModel)]="stateSheets.year" name="year" id="year" placeholder="type year" pattern="[0-9]+" maxlength="4" minlength="4" required>
+                                <div *ngIf="year.invalid && (year.touched)">
+                                  <div *ngIf="year.errors?.required" [ngStyle]="{'color': 'red'}">year is required
+                                  </div>
+                                    </div>  
+                                    <div *ngIf="year.invalid && (year.touched)">
+                                      <div *ngIf="year.errors?.pattern" [ngStyle]="{'color': 'red'}">special characters not allowed
+                                      </div>
+                                      </div>
+                              </div>
+                     -->
+
+                            <!-- <div class="form-group"> 
+                          Month:-  <select>
+                            <option  [value]="option1" *ngFor="let  option1 of options1">{{option1}}</option>
+                                    </select>
+                          </div>
+                          <div class="form-group">
+                        year:-  <select>
+                            <option [value]="option2" *ngFor="let  option2 of options2">{{option2}}</option>
+                          </select>
+                          </div> -->
+
+                          <!-- <div class="form-group">
+                          Month:-<select #month="ngModel" [(ngModel)]="stateSheets.month" name="month" id="month">
+                            <option value="" disabled>Choose a Month</option>
+                            <option *ngFor="let month of months" [ngValue]="Month">
+                              {{ month.abbrev }}
+                            </option>
+                            </select>
+                          </div>
+
+                          <div class="form-group">
+                          Year:-<select #year="ngModel" [(ngModel)]="stateSheets.year" name="year" id="year">
+                            <option value="" disabled>Choose a Year</option>
+                            <option *ngFor="let year of years" [ngValue]="Year">
+                              {{ year.abbrev }}
+                            </option>
+                          </select>
+                          </div> -->
+
+                          <div class="form-group">
+                            <label for="month">Month:- </label>
+                            <select class="form-control"  id="month"
+                                   #month="ngModel" required class="text-center"
+                                    [(ngModel)]="stateSheets.month" name="month" style="width: 100px;" placeholder="choose a month">
+                                    
+                              <option *ngFor="let month of months" [value]="month">{{month}}</option>
+                              
+                            </select>
+                            <div *ngIf="month.invalid && (month.touched)">
+                              <div *ngIf="month.errors?.required" [ngStyle]="{'color': 'red'}">month is required
+                              </div>
+                                </div> 
+                          </div>
+
+                          <div class="form-group">
+                            <label for="year">Year:-</label>&nbsp;&nbsp;
+                            <select class="form-control"  id="year"
+                                    #year="ngModel" required class="text-center"
+                                    [(ngModel)]="stateSheets.year" name="year" style="width: 100px;" placeholder="choose a year">
+                              <option *ngFor="let year of years" [value]="year">{{year}}</option>
+                            </select>
+                            <div *ngIf="year.invalid && (year.touched)">
+                              <div *ngIf="year.errors?.required" [ngStyle]="{'color': 'red'}">year is required
+                              </div>
+                                </div>  
+                          </div>
+              
+<button class="btn btn-success" (click)="loadData()" [disabled]="fm.invalid">Get</button><br><br>
+                          </div>
+
+                          <br><br>
+                          <button style="cursor: pointer" (click)="exportexcel()">export
+                          </button>   
+                          
+                          <br><br>  
+<div class="panel-body">
+    <table id="excel-table" class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>state</th>
+          <th>state_id</th>
+          <th>month</th>
+          <th>year</th>
+          <th>1st</th>
+          <th>2nd</th>
+          <th>3rd</th>
+          <th>4th</th>
+          <th>5th</th>
+          <th>6th</th>
+          <th>7th</th>
+          <th>8th</th>
+          <th>9th</th>
+          <th>10th</th>
+          <th>11th</th>
+          <th>12th</th>
+          <th>13th</th>
+          <th>14th</th>
+          <th>15th</th>
+          <th>16th</th>
+          <th>17th</th>
+          <th>18th</th>
+          <th>19th</th>
+          <th>20th</th>
+          <th>21st</th>
+          <th>22nd</th>
+          <th>23rd</th>
+          <th>24th</th>
+          <th>25th</th>
+          <th>26th</th>
+          <th>27th</th>
+          <th>28th</th>
+          <th>29th</th>
+          <th>30th</th>
+          <th>31st</th>
+          <th>Total</th>
+          <th>zone_name</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+        <tr *ngFor="let statesheet of stateSheets">
+          <td>{{statesheet.id}}</td>
+          <td>{{statesheet.state}}</td>
+          <td>{{statesheet.state_id}}</td>
+          <td>{{statesheet.month}}</td>
+          <td>{{statesheet.year}}</td>
+          <td>{{statesheet.first}}</td>
+          <td>{{statesheet.second}}</td>
+          <td>{{statesheet.third}}</td>
+          <td>{{statesheet.fourth}}</td>
+          <td>{{statesheet.fifth}}</td>
+          <td>{{statesheet.six}}</td>
+          <td>{{statesheet.seven}}</td>
+          <td>{{statesheet.eight}}</td>
+          <td>{{statesheet.nine}}</td>
+          <td>{{statesheet.ten}}</td>
+          <td>{{statesheet.eleven}}</td>
+          <td>{{statesheet.twelve}}</td>
+          <td>{{statesheet.thirteen}}</td>
+          <td>{{statesheet.fourteen}}</td>
+          <td>{{statesheet.fifteen}}</td>
+          <td>{{statesheet.sixteen}}</td>
+          <td>{{statesheet.seventeen}}</td>
+          <td>{{statesheet.eighteen}}</td>
+          <td>{{statesheet.nineteen}}</td>
+          <td>{{statesheet.twenty}}</td>
+          <td>{{statesheet.twentyone}}</td>
+          <td>{{statesheet.twentytwo}}</td>
+          <td>{{statesheet.twentythree}}</td>
+          <td>{{statesheet.twentyfour}}</td>
+          <td>{{statesheet.twentyfive}}</td>
+          <td>{{statesheet.twentysix}}</td>
+          <td>{{statesheet.twentyseven}}</td>
+          <td>{{statesheet.twentyeight}}</td>
+          <td>{{statesheet.twentynine}}</td>
+          <td>{{statesheet.thirty}}</td>
+          <td>{{statesheet.thirtyfirst}}</td>
+          <td>{{statesheet.total}}</td>
+          <td>{{statesheet.zone_name}}</td>
+      </tr>
+     
+
+      </tbody>
+    </table>
+  </div>
+        </div>
+        </form>
+    </body>
+</html>
